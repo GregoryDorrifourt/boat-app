@@ -9,3 +9,7 @@ Run `npm install` to install the dependancies.
 ## Start App
 
 Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`.
+
+## Demo
+
+https://gregorydorrifourt.fr/boat-app/

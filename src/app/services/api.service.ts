@@ -12,7 +12,7 @@ export class ApiService {
 
   private STORAGE_KEY: string = 'boatApp-APIData';
 
-  private apiEndpoint: string = '/assets/mocks/';
+  private apiEndpoint: string = './assets/mocks/';
 
   constructor(private http: HttpClient, @Inject(DOCUMENT) private document: Document) { }
 
