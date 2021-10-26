@@ -1,0 +1,14 @@
+@import '~src/scss/variables';
+
+.tag{
+  padding: 1rem;
+
+  &__item {
+    background: $light-background;
+    color: $pink;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    user-select: none;
+    cursor: pointer
+  }
+}

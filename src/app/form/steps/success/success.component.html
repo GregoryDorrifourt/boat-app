@@ -1,0 +1,22 @@
+<div class="columns">
+  <div class="column">
+    <h2>Plus qu'à valider !</h2>
+
+    <section class="boatDetails" *ngIf="boat">
+      <h3 class="title title--bold">Merci de vérifier les informations saisies :</h3>
+      <div>Titre de votre annonce: <strong>{{boat.title}}</strong></div>
+      <div>Type de propriétaire: <strong>{{ownerType}}</strong></div>
+      <div>Type de bateau: <strong>{{boatType}}</strong></div>
+      <div *ngIf="boat.hasOwnProperty('length')">Longueur : <strong>{{boat['length']}}m</strong></div>
+      <div *ngIf="boat.hasOwnProperty('width')">Largeur : <strong>{{boat['width']}}m</strong></div>
+      <div *ngIf="boat.hasOwnProperty('draught')">Tirant d'eau : <strong>{{boat.draught}}m</strong></div>
+      <div *ngIf="boat.hasOwnProperty('foil')">Foil : <strong>{{boat.foil ? 'Oui':'Non'}}</strong></div>
+      <div *ngIf="boat.hasOwnProperty('crew')">Equipage : <strong>{{boat.crew ? 'Oui':'Non'}}</strong></div>
+      <div *ngIf="boat.hasOwnProperty('annex')">Annexe : <strong>{{boat.annex ? 'Oui':'Non'}}</strong></div>
+    </section>
+
+    <div class="form-field form-field__button-wrapper">
+      <button class="button" role="button" (click)="submit()" >Valider</button>
+    </div>
+  </div>
+</div>

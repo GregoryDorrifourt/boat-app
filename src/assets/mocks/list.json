@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "Lagoon 400 Full Option - Hauturier",
+    "image": "https://static1.clickandboat.com/v1/p/c62M0IwTvIOvMMND1T8DPxAZ6bNBVvoD.medium.jpg",
+    "type": 0,
+    "ownerType": 0,
+    "length": 25,
+    "width": 5,
+    "draught": 2.5,
+    "crew": false,
+    "annex": true
+  },
+  {
+    "id": 2,
+    "title": "Voilier JEANNEAU SUN ODYSSEY",
+    "image": "https://static1.clickandboat.com/v1/p/x2oYdfm48Sx6d72yKmL8X8N3FzKRMbL2.big.jpg",
+    "type": 1,
+    "ownerType": 1,
+    "length": 25,
+    "width": 5,
+    "draught": 1.3,
+    "crew": true,
+    "annex": true
+  },
+  {
+    "id": 3,
+    "title": "ANTARES 780 HB à LA ROCHELLE MINIMES",
+    "image": "https://static1.clickandboat.com/v1/p/0FI5XvvTV5ppCWja4GF99aAmu44xPmUG.big.jpg",
+    "type": 2,
+    "ownerType": 0
+  },
+  {
+    "id": 4,
+    "title": "Jeanneau Sun Fizz DL",
+    "image": "https://static1.clickandboat.com/v1/p/ol31joo5zngi85kp9kpl5jx3aubbgata.big.jpg",
+    "type": 1,
+    "ownerType": 1,
+    "length": 25,
+    "width": 5,
+    "draught": 25.35,
+    "crew": true,
+    "annex": false
+  }
+]

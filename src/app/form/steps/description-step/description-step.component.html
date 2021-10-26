@@ -1,0 +1,32 @@
+<p>Encore quelques infos :</p>
+
+<div [formGroup]="formGroup">
+  <ng-container *ngFor="let field of formFields">
+    <ng-container [ngSwitch]="field.type">
+      <ng-container *ngSwitchCase="INPUT_TYPE.CHECKBOX">
+        <ng-container *ngTemplateOutlet="checkboxInputTemplate; context: {field: field}"></ng-container>
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        <ng-container *ngTemplateOutlet="dynamicInputTemplate; context: {field: field}"></ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <ng-template let-field="field" #dynamicInputTemplate>
+    <div class="form-field" >
+      <input [type]="field.type" class="form-field__input-text" [formControlName]="field.key"  [placeholder]="field.label" />
+    </div>
+  </ng-template>
+
+  <ng-template let-field="field" #checkboxInputTemplate>
+    <div class="form-field" >
+      <input type="checkbox" class="form-field__input-checkbox" [formControlName]="field.key"/>
+      <label>{{field?.label}}</label>
+    </div>
+  </ng-template>
+
+</div>
+
+<div class="form-field form-field__button-wrapper">
+  <button class="button" role="button" (click)="nextStep()" [disabled]="!formGroup.valid">Continuer</button>
+</div>

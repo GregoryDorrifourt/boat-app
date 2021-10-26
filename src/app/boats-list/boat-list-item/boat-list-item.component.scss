@@ -1,0 +1,35 @@
+@import "~src/scss/variables";
+.boat {
+  border-radius: 0.5rem;
+  background: $white;
+  box-shadow: $default-box-shadow;
+  overflow: hidden;
+  margin: 0.5rem auto 1.5rem;
+  max-width: 35rem;
+  position: relative;
+
+  &__image {
+    margin: 0;
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__description {
+    padding: 1.5rem;
+  }
+}
+
+.tag{
+  background: $pink;
+  color: $white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  user-select: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}

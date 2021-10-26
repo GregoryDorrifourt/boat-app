@@ -1,0 +1,12 @@
+<p>Je suis :</p>
+
+<div class="form-field form-field__checkboxes" [formGroup]="formGroup">
+  <ng-container *ngFor="let ownerType of ownerTypes">
+    <input type="radio" formControlName="ownerType" [id]="'ownerType'+ownerType.value" [value]="ownerType.value">
+    <label [for]="'ownerType'+ownerType.value">un {{ownerType.label}}</label>
+  </ng-container>
+</div>
+
+<div class="form-field form-field__button-wrapper">
+  <button class="button" role="button" (click)="nextStep()" [disabled]="!formGroup.valid">Continuer</button>
+</div>

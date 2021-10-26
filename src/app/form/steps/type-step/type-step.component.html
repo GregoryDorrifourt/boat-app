@@ -1,0 +1,12 @@
+<p>Type de mon bateau :</p>
+
+<div class="form-field form-field__checkboxes" [formGroup]="formGroup">
+  <ng-container *ngFor="let type of boatTypes">
+    <input type="radio" formControlName="type" [id]="'type'+type.value" [value]="type.value">
+    <label [for]="'type'+type.value">{{type.label}}</label>
+  </ng-container>
+</div>
+
+<div class="form-field form-field__button-wrapper">
+  <button class="button" role="button" (click)="nextStep()" [disabled]="!formGroup.valid">Continuer</button>
+</div>

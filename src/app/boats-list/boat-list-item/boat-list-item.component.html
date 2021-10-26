@@ -1,0 +1,17 @@
+<div class="boat" tabindex="0" [attr.aria-label]="boat?.title" *ngIf="boat">
+  <span class="tag" *ngIf="isPro">PRO</span>
+  <figure class="boat__image" [ngStyle]="{'background-image': 'url('+boat.image+')'}"></figure>
+  <article class="boat__description">
+    <h3 class="title--bold">{{boat.title}}</h3>
+    <div class="text text--uppercase text--grey text--small">{{boatType}}</div>
+    <section class="boatDetails" *ngIf="boat.hasOwnProperty('length')">
+      <h4 class="title title--bold">Caractéristiques :</h4>
+      <div *ngIf="boat.hasOwnProperty('length')">Longueur : <strong>{{boat['length']}}m</strong></div>
+      <div *ngIf="boat.hasOwnProperty('width')">Largeur : <strong>{{boat['width']}}m</strong></div>
+      <div *ngIf="boat.hasOwnProperty('draught')">Tirant d'eau : <strong>{{boat.draught}}m</strong></div>
+      <div *ngIf="boat.hasOwnProperty('foil')">Foil : <strong>{{boat.foil ? 'Oui':'Non'}}</strong></div>
+      <div *ngIf="boat.hasOwnProperty('crew')">Equipage : <strong>{{boat.crew ? 'Oui':'Non'}}</strong></div>
+      <div *ngIf="boat.hasOwnProperty('annex')">Annexe : <strong>{{boat.annex ? 'Oui':'Non'}}</strong></div>
+    </section>
+  </article>
+</div>

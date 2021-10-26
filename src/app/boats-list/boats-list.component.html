@@ -1,0 +1,24 @@
+<div class="columns">
+  <div class="column">
+    <div class="boats-container">
+
+      <app-filter></app-filter>
+
+      <ng-container *ngIf="boats.length; else noBoat">
+
+        <section>
+          <h2>Liste de nos bateaux disponibles:</h2>
+          <div class="columns">
+            <div class="column column--is-2--tablet column--is-4--desktop" *ngFor="let boat of boats">
+              <app-boat-list-item [boat-data]="boat"></app-boat-list-item>
+            </div>
+          </div>
+        </section>
+      </ng-container>
+      <ng-template #noBoat>
+        <p class="text text--centered" *ngIf="initialized">
+          Aucun bateau ne correspond à votre recherche
+        </p>
+      </ng-template>
+    </div>
+  </div>
